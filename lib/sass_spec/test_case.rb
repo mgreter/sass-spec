@@ -40,10 +40,13 @@ class SassSpec::TestCase
   end
 
   def _clean_output(css)
-    css.gsub(/\s+/, " ")
-       .gsub(/ *\{/, " {\n")
-       .gsub(/([;,]) */, "\\1\n")
-       .gsub(/ *\} */, " }\n")
+    # css.gsub(/\s+/, " ")
+    #    .gsub(/ *\{/, " {\n")
+    #    .gsub(/([;,]) */, "\\1\n")
+    #    .gsub(/ *\} */, " }\n")
+    #    .strip
+    # use more strict testing
+    css.gsub(/(?:\r?\n)+/, "\n")
        .strip
   end
 end

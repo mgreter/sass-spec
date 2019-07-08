@@ -269,6 +269,11 @@ don't have matches. Each test should have a counterpart in error/extend/ that
 tests the same thing but without `!optional` to verify that it properly produces
 an error message.
 
+<===> scope/options.yml
+---
+:todo:
+- sass/libsass#3026
+
 <===>
 ================================================================================
 <===> scope/sibling/input.scss

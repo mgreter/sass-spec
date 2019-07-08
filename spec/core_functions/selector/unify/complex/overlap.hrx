@@ -28,12 +28,12 @@ a {b: selector-unify("#c.s1-1 .s1-2", "#c.s2-1 .s2-2")}
 
 <===> id/forced_unification/output.css
 a {
-  b: #c.s2-1.s1-1 .s1-2.s2-2;
+  b: #c.s1-1.s2-1 .s1-2.s2-2;
 }
 
-<===> id/forced_unification/output-libsass.css
+<===> id/forced_unification/output-dart-sass.css
 a {
-  b: #c.s1-1.s2-1 .s1-2.s2-2;
+  b: #c.s2-1.s1-1 .s1-2.s2-2;
 }
 
 <===>
@@ -53,10 +53,10 @@ a {b: selector-unify(".s1-1::c .s1-2", ".s2-1::c .s2-2")}
 
 <===> pseudo_element/forced_unification/output.css
 a {
-  b: .s2-1.s1-1::c .s1-2.s2-2;
+  b: .s1-1.s2-1::c .s1-2.s2-2;
 }
 
-<===> pseudo_element/forced_unification/output-libsass.css
+<===> pseudo_element/forced_unification/output-dart-sass.css
 a {
-  b: .s1-1.s2-1::c .s1-2.s2-2;
+  b: .s2-1.s1-1::c .s1-2.s2-2;
 }

@@ -1,7 +1,7 @@
 <===> options.yml
 ---
 :todo:
-- libsass
+- sass/libsass#todo
 
 <===> input.scss
 // Unknown directives should support almost any sequence of valid tokens.

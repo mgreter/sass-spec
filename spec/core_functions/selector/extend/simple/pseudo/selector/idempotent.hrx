@@ -201,11 +201,6 @@ a {
 
 <===>
 ================================================================================
-<===> matches/matches_in_extender/options.yml
----
-:todo:
-- sass/libsass#3069
-
 <===> matches/matches_in_extender/input.scss
 a {b: selector-extend(":matches(.c)", ".c", ":matches(.d, .e)")}
 
@@ -236,11 +231,6 @@ a {
 
 <===>
 ================================================================================
-<===> any/any_in_extender/options.yml
----
-:todo:
-- sass/libsass#3069
-
 <===> any/any_in_extender/input.scss
 a {b: selector-extend(":any(.c)", ".c", ":any(.d, .e)")}
 
@@ -271,11 +261,6 @@ a {
 
 <===>
 ================================================================================
-<===> current/current_in_extender/options.yml
----
-:todo:
-- sass/libsass#3069
-
 <===> current/current_in_extender/input.scss
 a {b: selector-extend(":current(.c)", ".c", ":current(.d, .e)")}
 
@@ -283,13 +268,6 @@ a {b: selector-extend(":current(.c)", ".c", ":current(.d, .e)")}
 a {
   b: :current(.c, .d, .e);
 }
-
-<===>
-================================================================================
-<===> nth_child/options.yml
----
-:todo:
-- sass/libsass#2961
 
 <===>
 ================================================================================
@@ -342,13 +320,6 @@ a {
 a {
   b: :nth-child(2n+1 of .c);
 }
-
-<===>
-================================================================================
-<===> nth_last_child/options.yml
----
-:todo:
-- sass/libsass#2961
 
 <===>
 ================================================================================
@@ -425,11 +396,6 @@ a {
 
 <===>
 ================================================================================
-<===> prefixed/same_prefix_in_extender/options.yml
----
-:todo:
-- sass/libsass#3069
-
 <===> prefixed/same_prefix_in_extender/input.scss
 a {b: selector-extend(":-ms-matches(.c)", ".c", ":-ms-matches(.d, .e)")}
 

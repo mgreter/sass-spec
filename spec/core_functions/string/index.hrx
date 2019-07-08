@@ -105,12 +105,17 @@ Error: $string: 1 is not a string.
   input.scss 1:7  root stylesheet
 
 <===> error/type/string/error-libsass
-Error: argument `$string` of `str-index($string, $substring)` must be a string
-        on line 1:7 of input.scss, in function `str-index`
-        from line 1:7 of input.scss
->> a {b: str-index(1, "c")}
-
-   ------^
+Error: $string: 1 is not a string.
+  ,
+1 | a {b: str-index(1, "c")}
+  |                 ^
+  '
+  input.scss 1:17  str-index()
+  ,
+1 | a {b: str-index(1, "c")}
+  |       ^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7   root stylesheet
 
 <===>
 ================================================================================
@@ -126,12 +131,17 @@ Error: $substring: 1 is not a string.
   input.scss 1:7  root stylesheet
 
 <===> error/type/substring/error-libsass
-Error: argument `$substring` of `str-index($string, $substring)` must be a string
-        on line 1:7 of input.scss, in function `str-index`
-        from line 1:7 of input.scss
->> a {b: str-index("c", 1)}
-
-   ------^
+Error: $substring: 1 is not a string.
+  ,
+1 | a {b: str-index("c", 1)}
+  |                      ^
+  '
+  input.scss 1:22  str-index()
+  ,
+1 | a {b: str-index("c", 1)}
+  |       ^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7   root stylesheet
 
 <===>
 ================================================================================
@@ -151,11 +161,12 @@ Error: Missing argument $substring.
   input.scss 1:7  root stylesheet
 
 <===> error/too_few_args/error-libsass
-Error: Function str-index is missing argument $substring.
-        on line 1 of input.scss
->> a {b: str-index("c")}
-
-   ------^
+Error: Missing argument $substring.
+  ,
+1 | a {b: str-index("c")}
+  |       ^^^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet
 
 <===>
 ================================================================================
@@ -175,8 +186,9 @@ Error: Only 2 arguments allowed, but 3 were passed.
   input.scss 1:7  root stylesheet
 
 <===> error/too_many_args/error-libsass
-Error: wrong number of arguments (3 for 2) for `str-index'
-        on line 1:7 of input.scss
->> a {b: str-index("c", "d", "e")}
-
-   ------^
+Error: Only 2 arguments allowed, but 3 were passed.
+  ,
+1 | a {b: str-index("c", "d", "e")}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet

@@ -14,19 +14,15 @@ Error: Missing argument $color.
   input.scss 1:7  root stylesheet
 
 <===> too_few/error-libsass
-Error: Function change-color is missing argument $color.
-        on line 1 of input.scss
->> a {b: change-color()}
-
-   ------^
+Error: Missing argument $color.
+  ,
+1 | a {b: change-color()}
+  |       ^^^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet
 
 <===>
 ================================================================================
-<===> too_many/options.yml
----
-:todo:
-- sass/libsass#2900
-
 <===> too_many/input.scss
 a {b: change-color(red, 1)}
 
@@ -37,6 +33,19 @@ Error: Only one positional argument is allowed. All other arguments must be pass
   |       ^^^^^^^^^^^^^^^^^^^^
   '
   input.scss 1:7  root stylesheet
+
+<===> too_many/error-libsass
+Error: Only one positional argument is allowed. All other arguments must be passed by name.
+  ,
+1 | a {b: change-color(red, 1)}
+  |                    ^^^
+  '
+  input.scss 1:20  change-color()
+  ,
+1 | a {b: change-color(red, 1)}
+  |       ^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7   root stylesheet
 
 <===>
 ================================================================================
@@ -51,9 +60,3 @@ Error: No argument named $ambience.
   '
   input.scss 1:7  root stylesheet
 
-<===> unknown/error-libsass
-Error: Function change-color has no parameter named $ambience
-        on line 1:25 of input.scss
->> a {b: change-color(red, $ambience: 10%)}
-
-   ------------------------^

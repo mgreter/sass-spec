@@ -51,11 +51,6 @@ a {
 
 <===>
 ================================================================================
-<===> args/splat/combined/options.yml
----
-:todo:
-- sass/libsass#2942
-
 <===> args/splat/combined/input.scss
 $positional: 1 2;
 $named: ("blue": 3);
@@ -129,11 +124,6 @@ a {
 
 <===>
 ================================================================================
-<===> error/type/options.yml
----
-:todo:
-- sass/libsass#2940
-
 <===> error/type/input.scss
 a {b: call(1)}
 
@@ -144,6 +134,19 @@ Error: $function: 1 is not a function reference.
   |       ^^^^^^^
   '
   input.scss 1:7  root stylesheet
+
+<===> error/type/error-libsass
+Error: $function: 1 is not a function reference.
+  ,
+1 | a {b: call(1)}
+  |            ^
+  '
+  input.scss 1:12  call()
+  ,
+1 | a {b: call(1)}
+  |       ^^^^^^^
+  '
+  input.scss 1:7   root stylesheet
 
 <===>
 ================================================================================
@@ -163,11 +166,12 @@ Error: Missing argument $function.
   input.scss 1:7  root stylesheet
 
 <===> error/too_few_args/error-libsass
-Error: Function call is missing argument $function.
-        on line 1 of input.scss
->> a {b: call()}
-
-   ------^
+Error: Missing argument $function.
+  ,
+1 | a {b: call()}
+  |       ^^^^^^
+  '
+  input.scss 1:7  root stylesheet
 
 <===>
 ================================================================================
@@ -183,11 +187,17 @@ Error: Missing element $green.
   input.scss 1:7  root stylesheet
 
 <===> error/invalid_args/error-libsass
-Error: Function rgb is missing argument $green.
-        on line 1:7 of input.scss
->> a {b: call(get-function("rgb"), 1)}
-
-   ------^
+Error: Missing argument $green.
+  ,
+1 | a {b: call(get-function("rgb"), 1)}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7  call()
+  ,
+1 | a {b: call(get-function("rgb"), 1)}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet
 
 <===>
 ================================================================================
@@ -206,8 +216,14 @@ Error: Undefined variable.
   input.scss 4:42  root stylesheet
 
 <===> error/if_args/error-libsass
-Error: Undefined variable: "$undefined".
-        on line 4:42 of input.scss
->> a {b: call(get-function("if"), true, "", $undefined)}
-
-   -----------------------------------------^
+Error: Undefined variable.
+  ,
+4 | a {b: call(get-function("if"), true, "", $undefined)}
+  |                                          ^^^^^^^^^^
+  '
+  input.scss 4:42  call()
+  ,
+4 | a {b: call(get-function("if"), true, "", $undefined)}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 4:7   root stylesheet

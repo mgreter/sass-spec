@@ -1,10 +1,3 @@
-<===> options.yml
----
-:todo:
-- sass/libsass#2722
-
-<===>
-================================================================================
 <===> red/type/input.scss
 a {
   b: rgba("foo", 0, 0);
@@ -17,6 +10,19 @@ Error: $red: "foo" is not a number.
   |      ^^^^^^^^^^^^^^^^^
   '
   input.scss 2:6  root stylesheet
+
+<===> red/type/error-libsass
+Error: $red: "foo" is not a number.
+  ,
+2 |   b: rgba("foo", 0, 0);
+  |           ^^^^^
+  '
+  input.scss 2:11  rgba()
+  ,
+2 |   b: rgba("foo", 0, 0);
+  |      ^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6   root stylesheet
 
 <===>
 ================================================================================
@@ -33,6 +39,19 @@ Error: $green: "foo" is not a number.
   '
   input.scss 2:6  root stylesheet
 
+<===> green/type/error-libsass
+Error: $green: "foo" is not a number.
+  ,
+2 |   b: rgba(0, "foo", 0);
+  |              ^^^^^
+  '
+  input.scss 2:14  rgba()
+  ,
+2 |   b: rgba(0, "foo", 0);
+  |      ^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6   root stylesheet
+
 <===>
 ================================================================================
 <===> blue/type/input.scss
@@ -47,3 +66,16 @@ Error: $blue: "foo" is not a number.
   |      ^^^^^^^^^^^^^^^^^
   '
   input.scss 2:6  root stylesheet
+
+<===> blue/type/error-libsass
+Error: $blue: "foo" is not a number.
+  ,
+2 |   b: rgba(0, 0, "foo");
+  |                 ^^^^^
+  '
+  input.scss 2:17  rgba()
+  ,
+2 |   b: rgba(0, 0, "foo");
+  |      ^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6   root stylesheet

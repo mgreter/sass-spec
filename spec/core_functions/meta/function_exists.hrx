@@ -73,13 +73,6 @@ a {
 
 <===>
 ================================================================================
-<===> different_module/options.yml
----
-:todo:
-- sass/libsass#2807
-
-<===>
-================================================================================
 <===> different_module/undefined/input.scss
 @use "sass:color";
 a {b: function-exists("c", "color")}
@@ -209,11 +202,6 @@ a {
 
 <===>
 ================================================================================
-<===> named/options.yml
----
-:todo:
-- sass/libsass#2807
-
 <===> named/input.scss
 @use "sass:color";
 
@@ -238,20 +226,20 @@ Error: $name: 12px is not a string.
   input.scss 1:7  root stylesheet
 
 <===> error/argument/type/name/error-libsass
-Error: $name: 12px is not a string for `function-exists'
-        on line 1:7 of input.scss, in function `function-exists`
-        from line 1:7 of input.scss
->> a {b: function-exists(12px)}
-
-   ------^
+Error: $name: 12px is not a string.
+  ,
+1 | a {b: function-exists(12px)}
+  |                       ^^^^
+  '
+  input.scss 1:23  function-exists()
+  ,
+1 | a {b: function-exists(12px)}
+  |       ^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7   root stylesheet
 
 <===>
 ================================================================================
-<===> error/argument/type/module/options.yml
----
-:todo:
-- sass/libsass#2807
-
 <===> error/argument/type/module/input.scss
 a {b: function-exists("red", 1)}
 
@@ -262,6 +250,19 @@ Error: $module: 1 is not a string.
   |       ^^^^^^^^^^^^^^^^^^^^^^^^^
   '
   input.scss 1:7  root stylesheet
+
+<===> error/argument/type/module/error-libsass
+Error: $module: 1 is not a string.
+  ,
+1 | a {b: function-exists("red", 1)}
+  |                              ^
+  '
+  input.scss 1:30  function-exists()
+  ,
+1 | a {b: function-exists("red", 1)}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7   root stylesheet
 
 <===>
 ================================================================================
@@ -281,11 +282,12 @@ Error: Missing argument $name.
   input.scss 1:7  root stylesheet
 
 <===> error/argument/too_few/error-libsass
-Error: Function function-exists is missing argument $name.
-        on line 1 of input.scss
->> a {b: function-exists()}
-
-   ------^
+Error: Missing argument $name.
+  ,
+1 | a {b: function-exists()}
+  |       ^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet
 
 <===>
 ================================================================================
@@ -305,19 +307,15 @@ Error: Only 2 arguments allowed, but 3 were passed.
   input.scss 1:7  root stylesheet
 
 <===> error/argument/too_many/error-libsass
-Error: wrong number of arguments (3 for 1) for `function-exists'
-        on line 1:7 of input.scss
->> a {b: function-exists(c, d, e)}
-
-   ------^
+Error: Only 2 arguments allowed, but 3 were passed.
+  ,
+1 | a {b: function-exists(c, d, e)}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet
 
 <===>
 ================================================================================
-<===> error/conflict/options.yml
----
-:todo:
-- sass/libsass#2807
-
 <===> error/conflict/input.scss
 @use "other1" as *;
 @use "other2" as *;
@@ -343,12 +341,13 @@ Error: This function is available from multiple global modules.
     '
   input.scss 4:7  root stylesheet
 
-<===>
-================================================================================
-<===> error/module/options.yml
----
-:todo:
-- sass/libsass#2807
+<===> error/conflict/error-libsass
+Error: Function "member(...)" is available from multiple global modules.
+  ,
+2 | @use "other2" as *;
+  | ^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:1  root stylesheet
 
 <===>
 ================================================================================

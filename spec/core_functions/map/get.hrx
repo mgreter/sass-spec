@@ -78,11 +78,6 @@ a {
 
 <===>
 ================================================================================
-<===> nested/options.yml
----
-:todo:
-- sass/libsass#3127
-
 <===> nested/found/partial_path/input.scss
 a {b: inspect(map-get((c: (d: (e: f))), c, d))}
 
@@ -145,12 +140,17 @@ Error: $map: 1 is not a map.
   input.scss 1:7  root stylesheet
 
 <===> error/type/map/error-libsass
-Error: argument `$map` of `map-get($map, $key)` must be a map
-        on line 1:7 of input.scss, in function `map-get`
-        from line 1:7 of input.scss
->> a {b: map-get(1, 2)}
-
-   ------^
+Error: $map: 1 is not a map.
+  ,
+1 | a {b: map-get(1, 2)}
+  |               ^
+  '
+  input.scss 1:15  map-get()
+  ,
+1 | a {b: map-get(1, 2)}
+  |       ^^^^^^^^^^^^^
+  '
+  input.scss 1:7   root stylesheet
 
 <===>
 ================================================================================
@@ -170,8 +170,9 @@ Error: Missing argument $key.
   input.scss 1:7  root stylesheet
 
 <===> error/too_few_args/error-libsass
-Error: Function map-get is missing argument $key.
-        on line 1 of input.scss
->> a {b: map-get(1)}
-
-   ------^
+Error: Missing argument $key.
+  ,
+1 | a {b: map-get(1)}
+  |       ^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet

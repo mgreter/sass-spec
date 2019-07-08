@@ -61,11 +61,6 @@ a {
 
 <===>
 ================================================================================
-<===> through_use/options.yml
----
-:todo:
-- sass/libsass#2807
-
 <===> through_use/input.scss
 @use "other" as *;
 a {b: variable-exists(global-variable)}
@@ -77,13 +72,6 @@ $global-variable: null;
 a {
   b: true;
 }
-
-<===>
-================================================================================
-<===> through_forward/options.yml
----
-:todo:
-- sass/libsass#2807
 
 <===>
 ================================================================================
@@ -186,12 +174,17 @@ Error: $name: 12px is not a string.
   input.scss 1:7  root stylesheet
 
 <===> error/argument/type/error-libsass
-Error: argument `$name` of `variable-exists($name)` must be a string
-        on line 1:7 of input.scss, in function `variable-exists`
-        from line 1:7 of input.scss
->> a {b: variable-exists(12px)}
-
-   ------^
+Error: $name: 12px is not a string.
+  ,
+1 | a {b: variable-exists(12px)}
+  |                       ^^^^
+  '
+  input.scss 1:23  variable-exists()
+  ,
+1 | a {b: variable-exists(12px)}
+  |       ^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7   root stylesheet
 
 <===>
 ================================================================================
@@ -211,11 +204,12 @@ Error: Missing argument $name.
   input.scss 1:7  root stylesheet
 
 <===> error/argument/too_few/error-libsass
-Error: Function variable-exists is missing argument $name.
-        on line 1 of input.scss
->> a {b: variable-exists()}
-
-   ------^
+Error: Missing argument $name.
+  ,
+1 | a {b: variable-exists()}
+  |       ^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet
 
 <===>
 ================================================================================
@@ -235,19 +229,15 @@ Error: Only 1 argument allowed, but 2 were passed.
   input.scss 1:7  root stylesheet
 
 <===> error/argument/too_many/error-libsass
-Error: wrong number of arguments (2 for 1) for `variable-exists'
-        on line 1:7 of input.scss
->> a {b: variable-exists(foo, bar)}
-
-   ------^
+Error: Only 1 argument allowed, but 2 were passed.
+  ,
+1 | a {b: variable-exists(foo, bar)}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet
 
 <===>
 ================================================================================
-<===> conflict/options.yml
----
-:todo:
-- sass/libsass#2807
-
 <===> conflict/input.scss
 @use "other1" as *;
 @use "other2" as *;
@@ -272,3 +262,11 @@ Error: This variable is available from multiple global modules.
     |       ^^^^^^^^^^^^^^^^^^^^^^^ variable use
     '
   input.scss 4:7  root stylesheet
+
+<===> conflict/error-libsass
+Error: $member is available from multiple global modules.
+  ,
+2 | @use "other2" as *;
+  | ^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:1  root stylesheet

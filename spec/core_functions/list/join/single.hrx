@@ -41,13 +41,6 @@ a {
   b: 1, 2;
 }
 
-<===>
-================================================================================
-<===> both/comma/last/options.yml
----
-:todo:
-- sass/libsass#2924
-
 <===> both/comma/last/input.scss
 @import "core_functions/list/utils";
 
@@ -67,13 +60,6 @@ a {b: join([1], 2 3 4)}
 a {
   b: [1 2 3 4];
 }
-
-<===>
-================================================================================
-<===> first/undecided/and_comma/options.yml
----
-:todo:
-- sass/libsass#2924
 
 <===> first/undecided/and_comma/input.scss
 a {b: join([1], (2, 3, 4))}
@@ -185,21 +171,12 @@ a {
   value: inspect($result);
   type: type-of($result);
 
-  // Note: LibSass's output here is strange but not strictly-speaking wrong.
-  // See sass/libsass#2926 for details.
   separator: real-separator($result);
 }
 
 <===> non_list/first/undecided/output.css
 a {
   value: c;
-  type: list;
-  separator: space;
-}
-
-<===> non_list/first/undecided/output-libsass.css
-a {
-  value: (c,);
   type: list;
   separator: space;
 }
@@ -234,8 +211,6 @@ a {
   value: inspect($result);
   type: type-of($result);
 
-  // Note: LibSass's output here is strange but not strictly-speaking wrong.
-  // See sass/libsass#2926 for details.
   separator: real-separator($result);
 }
 
@@ -246,9 +221,3 @@ a {
   separator: space;
 }
 
-<===> non_list/second/undecided/output-libsass.css
-a {
-  value: (c,);
-  type: list;
-  separator: space;
-}

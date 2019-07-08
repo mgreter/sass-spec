@@ -8,13 +8,22 @@ $theme: (red: #D700EE);
 .test {
 	color: test($theme...);
 }
-<===> error
-Error: Variable keyword argument map must have string keys.
-       #ff0000 is not a string in (red: #D700EE).
-        on line 8 of input.scss
-  Use --trace for backtrace.
 
-<===> error-dart-sass
+<===> error-libsass
+Error: Variable keyword argument map must have string keys.
+red is not a string in (red: #D700EE).
+  ,
+8 |     color: test($theme...);
+  |                 ^^^^^^
+  '
+  input.scss 8:14  test()
+  ,
+8 |     color: test($theme...);
+  |            ^^^^^^^^^^^^^^^
+  '
+  input.scss 8:9   root stylesheet
+
+<===> error
 Error: Variable keyword argument map must have string keys.
 red is not a string in (red: #D700EE).
   ,

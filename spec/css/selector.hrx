@@ -14,11 +14,6 @@
 
 <===>
 ================================================================================
-<===> attribute/modifier/unknown/options.yml
----
-:todo:
-- sass/libsass#2886
-
 <===> attribute/modifier/unknown/input.scss
 // At time of writing, only the modifiers "i" and "s" are allowed by the CSS
 // spec. However, for forwards-compatibility with future CSS additions, any
@@ -50,11 +45,6 @@
   c: d;
 }
 
-<===> attribute/modifier/after_string/output-libsass.css
-[a="b" i] {
-  c: d;
-}
-
 <===>
 ================================================================================
 <===> attribute/quoted_non_identifier/input.scss
@@ -69,11 +59,6 @@
 
 <===>
 ================================================================================
-<===> inline_comments/options.yml
----
-:todo:
-- sass/libsass#3124
-
 <===> inline_comments/silent/input.sass
 a, // comment
 b
@@ -108,6 +93,15 @@ This selector doesn't have any properties and won't be rendered.
   | ^^^^^^^^^^^^^
   '
 
+<===> inline_comments/silent/with_comma_in_comment/warning-libsass
+WARNING on line 4, column 1 of input.sass: 
+This selector doesn't have any properties and won't be rendered.
+  ,
+4 | a // comment,
+  | ^^^^^^^^^^^^^
+  '
+    input.sass 4:1  root stylesheet
+
 <===>
 ================================================================================
 <===> inline_comments/loud/comma_before/input.sass
@@ -136,11 +130,6 @@ b {
 
 <===>
 ================================================================================
-<===> placeholder/pseudoselectors/matches/solo/options.yml
----
-:todo:
-- sass/libsass#2422
-
 <===> placeholder/pseudoselectors/matches/solo/input.scss
 // Since `%b` doesn't exist, no selectors can match it, so this rule should be
 // removed.
@@ -183,11 +172,6 @@ a:not(c) {
 
 <===>
 ================================================================================
-<===> placeholder/pseudoselectors/not/universal/options.yml
----
-:todo:
-- sass/libsass#2422
-
 <===> placeholder/pseudoselectors/not/universal/input.scss
 // Since `%b` doesn't exist, all elements match `:not(%b)`.
 :not(%b) {x: y}
@@ -212,11 +196,6 @@ a b:c, a > d {
 
 <===>
 ================================================================================
-<===> reference_combinator/options.yml
----
-:todo:
-- libsass
-
 <===> reference_combinator/input.scss
 // Reference combinators used to be supported by Sass when they were part of the
 // CSS spec, but they're no longer supported and should now produce errors.
@@ -227,7 +206,7 @@ a b:c, a > d {
 <===> reference_combinator/error
 Error: expected selector.
   ,
-3 | .foo /bar/ .baz{
+3 | .foo /bar/ .baz {
   |      ^
   '
   input.scss 3:6  root stylesheet
@@ -264,17 +243,10 @@ Error: expected selector.
 <===> error/attribute/modifier/no_operator/error
 Error: Expected "]".
   ,
-1 | [a b]{c: d}
+1 | [a b] {c: d}
   |    ^
   '
   input.scss 1:4  root stylesheet
-
-<===> error/attribute/modifier/no_operator/error-libsass
-Error: invalid operator in attribute selector for a
-        on line 1:2 of input.scss
->> [a b] {c: d}
-
-   -^
 
 <===>
 ================================================================================
@@ -285,17 +257,10 @@ Error: invalid operator in attribute selector for a
 <===> error/attribute/modifier/too_long/error
 Error: expected "]".
   ,
-2 | [a=b cd]{e: f}
+2 | [a=b cd] {e: f}
   |       ^
   '
   input.scss 2:7  root stylesheet
-
-<===> error/attribute/modifier/too_long/error-libsass
-Error: unterminated attribute selector for a
-        on line 2:4 of input.scss
->> [a=b cd] {e: f}
-
-   ---^
 
 <===>
 ================================================================================
@@ -306,17 +271,10 @@ Error: unterminated attribute selector for a
 <===> error/attribute/modifier/underscore/error
 Error: expected "]".
   ,
-2 | [a=b _]{c: d}
-  |      ^
+2 | [a=b _] {c: d}
+  |     ^
   '
-  input.scss 2:6  root stylesheet
-
-<===> error/attribute/modifier/underscore/error-libsass
-Error: unterminated attribute selector for a
-        on line 2:4 of input.scss
->> [a=b _] {c: d}
-
-   ---^
+  input.scss 2:5  root stylesheet
 
 <===>
 ================================================================================
@@ -327,17 +285,10 @@ Error: unterminated attribute selector for a
 <===> error/attribute/modifier/digit/error
 Error: expected "]".
   ,
-2 | [a=b 1]{c: d}
-  |      ^
+2 | [a=b 1] {c: d}
+  |     ^
   '
-  input.scss 2:6  root stylesheet
-
-<===> error/attribute/modifier/digit/error-libsass
-Error: unterminated attribute selector for a
-        on line 2:4 of input.scss
->> [a=b 1] {c: d}
-
-   ---^
+  input.scss 2:5  root stylesheet
 
 <===>
 ================================================================================
@@ -348,17 +299,18 @@ Error: unterminated attribute selector for a
 <===> error/attribute/modifier/unicode/error
 Error: expected "]".
   ,
-2 | [a=b ï]{c: d}
-  |      ^
+2 | [a=b ï] {c: d}
+  |     ^
   '
-  input.scss 2:6  root stylesheet
+  input.scss 2:5  root stylesheet
 
 <===> error/attribute/modifier/unicode/error-libsass
-Error: unterminated attribute selector for a
-        on line 2:4 of input.scss
->> [a=b ï] {c: d}
-
-   ---^
+Error: expected "]".
+  ,
+2 | [a=b ?] {c: d}
+  |     ^
+  '
+  input.scss 2:5  root stylesheet
 
 <===>
 ================================================================================
@@ -367,11 +319,6 @@ Error: unterminated attribute selector for a
 
 <===> escaping/number_as_first_char_without_space/output.css
 .\31 u {
-  a: b;
-}
-
-<===> escaping/number_as_first_char_without_space/output-libsass.css
-.\31u {
   a: b;
 }
 
@@ -395,11 +342,6 @@ Error: unterminated attribute selector for a
   a: b;
 }
 
-<===> escaping/number_as_nonfirst_char_without_space/output-libsass.css
-.a\31u {
-  a: b;
-}
-
 <===>
 ================================================================================
 <===> escaping/number_as_nonfirst_char_with_space/input.scss
@@ -407,11 +349,6 @@ Error: unterminated attribute selector for a
 
 <===> escaping/number_as_nonfirst_char_with_space/output.css
 .a1u {
-  a: b;
-}
-
-<===> escaping/number_as_nonfirst_char_with_space/output-libsass.css
-.a\31 u {
   a: b;
 }
 
@@ -435,11 +372,6 @@ Error: unterminated attribute selector for a
   a: b;
 }
 
-<===> escaping/dollar_char_as_numeric/output-libsass.css
-.u\24 {
-  a: b;
-}
-
 <===>
 ================================================================================
 <===> escaping/parenthesis_in_interpolation/input.scss
@@ -447,10 +379,5 @@ Error: unterminated attribute selector for a
 
 <===> escaping/parenthesis_in_interpolation/output.css
 .u\( {
-  a: b;
-}
-
-<===> escaping/parenthesis_in_interpolation/output-libsass.css
-.u\28 {
   a: b;
 }

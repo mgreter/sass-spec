@@ -35,6 +35,11 @@ Extensions in `_other.scss` don't affect syles in `input.scss`, both because
 `input.scss` is downstream and because the CSS in `_other.scss` is fully
 resolved before it's loaded.
 
+<===> in_other/options.yml
+---
+:todo:
+- sass/libsass#3026
+
 <===>
 ================================================================================
 <===> in_other/before/input.scss

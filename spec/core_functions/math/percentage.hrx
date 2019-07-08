@@ -70,12 +70,17 @@ Error: $number: c is not a number.
   input.scss 1:7  root stylesheet
 
 <===> error/type/error-libsass
-Error: argument `$number` of `percentage($number)` must be a number
-        on line 1:7 of input.scss, in function `percentage`
-        from line 1:7 of input.scss
->> a {b: percentage(c)}
-
-   ------^
+Error: $number: c is not a number.
+  ,
+1 | a {b: percentage(c)}
+  |                  ^
+  '
+  input.scss 1:18  percentage()
+  ,
+1 | a {b: percentage(c)}
+  |       ^^^^^^^^^^^^^
+  '
+  input.scss 1:7   root stylesheet
 
 <===>
 ================================================================================
@@ -91,12 +96,17 @@ Error: $number: Expected 1% to have no units.
   input.scss 1:7  root stylesheet
 
 <===> error/unit/error-libsass
-Error: argument $number of `percentage($number)` must be unitless
-        on line 1:7 of input.scss, in function `percentage`
-        from line 1:7 of input.scss
->> a {b: percentage(1%)}
-
-   ------^
+Error: $number: Expected 1% to have no units.
+  ,
+1 | a {b: percentage(1%)}
+  |                  ^^
+  '
+  input.scss 1:18  percentage()
+  ,
+1 | a {b: percentage(1%)}
+  |       ^^^^^^^^^^^^^^
+  '
+  input.scss 1:7   root stylesheet
 
 <===>
 ================================================================================
@@ -116,11 +126,12 @@ Error: Missing argument $number.
   input.scss 1:7  root stylesheet
 
 <===> error/too_few_args/error-libsass
-Error: Function percentage is missing argument $number.
-        on line 1 of input.scss
->> a {b: percentage()}
-
-   ------^
+Error: Missing argument $number.
+  ,
+1 | a {b: percentage()}
+  |       ^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet
 
 <===>
 ================================================================================
@@ -140,8 +151,9 @@ Error: Only 1 argument allowed, but 2 were passed.
   input.scss 1:7  root stylesheet
 
 <===> error/too_many_args/error-libsass
-Error: wrong number of arguments (2 for 1) for `percentage'
-        on line 1:7 of input.scss
->> a {b: percentage(1, 2)}
-
-   ------^
+Error: Only 1 argument allowed, but 2 were passed.
+  ,
+1 | a {b: percentage(1, 2)}
+  |       ^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet

@@ -1,10 +1,3 @@
-<===> options.yml
----
-:todo:
-- sass/libsass#2722
-
-<===>
-================================================================================
 <===> list/empty/input.scss
 a {
   b: rgba(());
@@ -12,6 +5,19 @@ a {
 
 <===> list/empty/error
 Error: Missing element $red.
+  ,
+2 |   b: rgba(());
+  |      ^^^^^^^^
+  '
+  input.scss 2:6  rgba()
+  ,
+2 |   b: rgba(());
+  |      ^^^^^^^^
+  '
+  input.scss 2:6  root stylesheet
+
+<===> list/empty/error-libsass
+Error: Missing argument $red.
   ,
 2 |   b: rgba(());
   |      ^^^^^^^^
@@ -31,6 +37,19 @@ Error: Missing element $green.
 2 |   b: rgba(1);
   |      ^^^^^^^
   '
+  input.scss 2:6  rgba()
+  ,
+2 |   b: rgba(1);
+  |      ^^^^^^^
+  '
+  input.scss 2:6  root stylesheet
+
+<===> list/one_element/error-libsass
+Error: Missing argument $green.
+  ,
+2 |   b: rgba(1);
+  |      ^^^^^^^
+  '
   input.scss 2:6  root stylesheet
 
 <===>
@@ -42,6 +61,19 @@ a {
 
 <===> list/two_elements/error
 Error: Missing element $blue.
+  ,
+2 |   b: rgba(1 2);
+  |      ^^^^^^^^^
+  '
+  input.scss 2:6  rgba()
+  ,
+2 |   b: rgba(1 2);
+  |      ^^^^^^^^^
+  '
+  input.scss 2:6  root stylesheet
+
+<===> list/two_elements/error-libsass
+Error: Missing argument $blue.
   ,
 2 |   b: rgba(1 2);
   |      ^^^^^^^^^
@@ -61,7 +93,25 @@ Error: Only 3 elements allowed, but 4 were passed.
 2 |   b: rgba(1 2 3 0.4);
   |      ^^^^^^^^^^^^^^^
   '
+  input.scss 2:6  rgba()
+  ,
+2 |   b: rgba(1 2 3 0.4);
+  |      ^^^^^^^^^^^^^^^
+  '
   input.scss 2:6  root stylesheet
+
+<===> list/four_elements/error-libsass
+Error: Only 3 arguments allowed, but 4 were passed.
+  ,
+2 |   b: rgba(1 2 3 0.4);
+  |           ^^^^^^^^^
+  '
+  input.scss 2:11  rgba()
+  ,
+2 |   b: rgba(1 2 3 0.4);
+  |      ^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6   root stylesheet
 
 <===>
 ================================================================================
@@ -76,7 +126,25 @@ Error: $channels must be a space-separated list.
 2 |   b: rgba((1, 2, 3));
   |      ^^^^^^^^^^^^^^^
   '
+  input.scss 2:6  rgba()
+  ,
+2 |   b: rgba((1, 2, 3));
+  |      ^^^^^^^^^^^^^^^
+  '
   input.scss 2:6  root stylesheet
+
+<===> list/comma_separated/error-libsass
+Error: $channels must be a space-separated list.
+  ,
+2 |   b: rgba((1, 2, 3));
+  |           ^^^^^^^^^
+  '
+  input.scss 2:11  rgba()
+  ,
+2 |   b: rgba((1, 2, 3));
+  |      ^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6   root stylesheet
 
 <===>
 ================================================================================
@@ -91,7 +159,25 @@ Error: $channels must be an unbracketed list.
 2 |   b: rgba([1 2 3]);
   |      ^^^^^^^^^^^^^
   '
+  input.scss 2:6  rgba()
+  ,
+2 |   b: rgba([1 2 3]);
+  |      ^^^^^^^^^^^^^
+  '
   input.scss 2:6  root stylesheet
+
+<===> list/bracketed/error-libsass
+Error: $channels must be an unbracketed list.
+  ,
+2 |   b: rgba([1 2 3]);
+  |           ^^^^^^^
+  '
+  input.scss 2:11  rgba()
+  ,
+2 |   b: rgba([1 2 3]);
+  |      ^^^^^^^^^^^^^
+  '
+  input.scss 2:6   root stylesheet
 
 <===>
 ================================================================================
@@ -108,6 +194,19 @@ Error: $red: "foo" is not a number.
   '
   input.scss 2:6  root stylesheet
 
+<===> type/red/error-libsass
+Error: $red: "foo" is not a number.
+  ,
+2 |   b: rgba("foo" 2 3);
+  |           ^^^^^
+  '
+  input.scss 2:11  rgba()
+  ,
+2 |   b: rgba("foo" 2 3);
+  |      ^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6   root stylesheet
+
 <===>
 ================================================================================
 <===> type/green/input.scss
@@ -122,6 +221,19 @@ Error: $green: "foo" is not a number.
   |      ^^^^^^^^^^^^^^^
   '
   input.scss 2:6  root stylesheet
+
+<===> type/green/error-libsass
+Error: $green: "foo" is not a number.
+  ,
+2 |   b: rgba(1 "foo" 3);
+  |             ^^^^^
+  '
+  input.scss 2:13  rgba()
+  ,
+2 |   b: rgba(1 "foo" 3);
+  |      ^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6   root stylesheet
 
 <===>
 ================================================================================
@@ -138,6 +250,19 @@ Error: $blue: "foo" is not a number.
   '
   input.scss 2:6  root stylesheet
 
+<===> type/blue/error-libsass
+Error: $blue: "foo" is not a number.
+  ,
+2 |   b: rgba(1 2 "foo");
+  |               ^^^^^
+  '
+  input.scss 2:15  rgba()
+  ,
+2 |   b: rgba(1 2 "foo");
+  |      ^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6   root stylesheet
+
 <===>
 ================================================================================
 <===> quoted_var_slash/input.scss
@@ -152,3 +277,16 @@ Error: $blue: "var(--foo) / 0.4" is not a number.
   |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   '
   input.scss 2:6  root stylesheet
+
+<===> quoted_var_slash/error-libsass
+Error: $blue: "var(--foo) / 0.4" is not a number.
+  ,
+2 |   b: rgba(1 2 "var(--foo) / 0.4");
+  |               ^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:15  rgba()
+  ,
+2 |   b: rgba(1 2 "var(--foo) / 0.4");
+  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6   root stylesheet

@@ -286,13 +286,6 @@ a {
   type: string;
 }
 
-<===>
-================================================================================
-<===> list/single/space/options.yml
----
-:todo:
-- sass/libsass#2926
-
 <===> list/single/space/input.scss
 $result: inspect(append((), 1, space));
 a {
@@ -396,13 +389,6 @@ a {
   type: string;
 }
 
-<===>
-================================================================================
-<===> list/nested/empty/in_space/bracketed/options.yml
----
-:todo:
-- sass/libsass#2654
-
 <===> list/nested/empty/in_space/bracketed/input.scss
 $result: inspect([() ()]);
 a {
@@ -460,13 +446,6 @@ a {
   value: (), ();
   type: string;
 }
-
-<===>
-================================================================================
-<===> list/nested/space/in_space/bracketed/options.yml
----
-:todo:
-- sass/libsass#2654
 
 <===> list/nested/space/in_space/bracketed/input.scss
 $result: inspect([(1 2) (3 4)]);
@@ -526,13 +505,6 @@ a {
   type: string;
 }
 
-<===>
-================================================================================
-<===> list/nested/comma/in_space/bracketed/options.yml
----
-:todo:
-- sass/libsass#2931
-
 <===> list/nested/comma/in_space/bracketed/input.scss
 $result: inspect([(1, 2) (3, 4)]);
 a {
@@ -545,13 +517,6 @@ a {
   value: [(1, 2) (3, 4)];
   type: string;
 }
-
-<===>
-================================================================================
-<===> list/nested/comma/in_space/unbracketed/options.yml
----
-:todo:
-- sass/libsass#2931
 
 <===> list/nested/comma/in_space/unbracketed/input.scss
 $result: inspect((1, 2) (3, 4));
@@ -686,13 +651,6 @@ a {
   type: string;
 }
 
-<===>
-================================================================================
-<===> map/list/key/comma/options.yml
----
-:todo:
-- sass/libsass#2932
-
 <===> map/list/key/comma/input.scss
 $result: inspect(((1, 2): 3, (4, 5): 6));
 a {
@@ -718,12 +676,6 @@ a {
 <===> map/list/value/space/output.css
 a {
   value: (1: 2 3, 4: 5 6);
-  type: string;
-}
-
-<===> map/list/value/space/output-libsass.css
-a {
-  value: (1: (2 3), 4: (5 6));
   type: string;
 }
 
@@ -775,11 +727,12 @@ Error: Missing argument $value.
   input.scss 1:7  root stylesheet
 
 <===> error/too_few_args/error-libsass
-Error: Function inspect is missing argument $value.
-        on line 1 of input.scss
->> a {a: inspect()}
-
-   ------^
+Error: Missing argument $value.
+  ,
+1 | a {a: inspect()}
+  |       ^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet
 
 <===>
 ================================================================================
@@ -799,8 +752,9 @@ Error: Only 1 argument allowed, but 2 were passed.
   input.scss 1:7  root stylesheet
 
 <===> error/too_many_args/error-libsass
-Error: wrong number of arguments (2 for 1) for `inspect'
-        on line 1:7 of input.scss
->> a {a: inspect(1, 2)}
-
-   ------^
+Error: Only 1 argument allowed, but 2 were passed.
+  ,
+1 | a {a: inspect(1, 2)}
+  |       ^^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet

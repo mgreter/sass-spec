@@ -3,6 +3,11 @@
 should produce the same errors when extensions fail. We assume that they use
 shared infrastructure, though, and as such only test a basic case.
 
+<===> options.yml
+---
+:todo:
+- sass/libsass#2807
+
 <===> input.scss
 @use "midstream";
 

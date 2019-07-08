@@ -69,7 +69,8 @@ should include their own tests for CR LF newlines.
 <===>
 ================================================================================
 <===> converts_newlines/scss/cr/input.scss
-/* foo * bar */
+/* foo
+ * bar */
 
 <===> converts_newlines/scss/cr/output.css
 /* foo
@@ -88,16 +89,12 @@ should include their own tests for CR LF newlines.
 ================================================================================
 <===> converts_newlines/sass/cr/input.sass
 /*
-  foo  bar
+  foo
+  bar
 
 <===> converts_newlines/sass/cr/output.css
 /* foo
  * bar */
-
-<===> converts_newlines/sass/cr/output-libsass.css
-/*
-  foo
-  bar */
 
 <===>
 ================================================================================
@@ -108,12 +105,6 @@ should include their own tests for CR LF newlines.
 <===> converts_newlines/sass/ff/output.css
 /* foo
  * bar */
-
-<===> converts_newlines/sass/ff/output-libsass.css
-/*
-  foo
-  bar */
-
 
 <===>
 ================================================================================
@@ -176,13 +167,6 @@ Error: expected more input.
   '
   input.scss 3:2  root stylesheet
 
-<===> error/loud/unterminated/scss/error-libsass
-Error: Invalid CSS after "  b: c /": expected expression (e.g. 1px, bold), was "* d"
-        on line 2:8 of input.scss
->>   b: c /* d
-
-   -------^
-
 <===>
 ================================================================================
 <===> error/loud/unterminated/sass/input.sass
@@ -196,13 +180,6 @@ Error: expected */.
   |            ^
   '
   input.sass 2:12  root stylesheet
-
-<===> error/loud/unterminated/sass/error-libsass
-Error: Invalid CSS after "  b: c /": expected expression (e.g. 1px, bold), was "* d; }"
-        on line 2:8 of input.sass
->>   b: c /* d; }
-
-   -------^
 
 <===>
 ================================================================================
@@ -218,10 +195,3 @@ Error: expected */.
   |            ^
   '
   input.sass 2:12  root stylesheet
-
-<===> error/loud/multi_line/sass/error-libsass
-Error: Invalid CSS after "...    e */ f {} }": expected selector or at-rule, was "}"
-        on line 3:22 of input.sass
->>           e */ f {} } }
-
-   ---------------------^

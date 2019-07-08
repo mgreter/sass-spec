@@ -10,8 +10,3 @@
 b {
   c: d;
 }
-
-<===> keyframes/all/output-libsass.css
-b {
-  c: d;
-}

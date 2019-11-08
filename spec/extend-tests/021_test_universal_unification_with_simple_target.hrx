@@ -3,6 +3,11 @@
 *|* {@extend .foo} -a {@extend %-a}
 
 <===> output.css
+-a *|* {
+  a: b;
+}
+
+<===> output-dart-sass.css
 -a .foo, -a *|* {
   a: b;
 }

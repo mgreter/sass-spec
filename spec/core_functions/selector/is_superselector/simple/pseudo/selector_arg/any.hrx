@@ -8,11 +8,6 @@ but only a small range is tested here.
 <===> superset/input.scss
 a {b: is-superselector(":any(c d, e f, g h)", "c d.i, e j f")}
 
-<===> superset/options.yml
----
-:todo:
-- libsass
-
 <===> superset/output.css
 a {
   b: true;

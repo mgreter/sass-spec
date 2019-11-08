@@ -41,4 +41,9 @@ Error: blah is not a number.
 3 |   bar: call(min, $foo...);
   |        ^^^^^^^^^^^^^^^^^^
   '
+  input.scss 3:8   call()
+  ,
+3 |   bar: call(min, $foo...);
+  |        ^^^^^^^^^^^^^^^^^^
+  '
   input.scss 3:8   root stylesheet

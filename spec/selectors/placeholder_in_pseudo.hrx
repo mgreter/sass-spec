@@ -1,8 +1,3 @@
-<===> options.yml
----
-:todo:
-- libsass
-
 <===> input.scss
 // Style rules with placeholders should only be deleted if they can't match
 // *any* real elements.

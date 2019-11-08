@@ -1,11 +1,6 @@
 <===> superset/input.scss
 a {b: is-superselector("::slotted(c d, e f, g h)", "::slotted(c d.i, e j f)")}
 
-<===> superset/options.yml
----
-:todo:
-- libsass
-
 <===> superset/output.css
 a {
   b: true;
@@ -35,11 +30,6 @@ a {
 ================================================================================
 <===> prefix/superset/input.scss
 a {b: is-superselector("::-pfx-slotted(c d, e f, g h)", "::-pfx-slotted(c d.i, e j f)")}
-
-<===> prefix/superset/options.yml
----
-:todo:
-- libsass
 
 <===> prefix/superset/output.css
 a {

@@ -82,6 +82,20 @@ a list of strings, or a list of lists of strings.
   '
   input.scss 1:7  root stylesheet
 
+<===> super/type/error-libsass
+Error: $super: 1 is not a valid selector: it must be a string,
+a list of strings, or a list of lists of strings.
+  ,
+1 | a {b: is-superselector(1, "c")}
+  |                        ^
+  '
+  input.scss 1:24  is-superselector()
+  ,
+1 | a {b: is-superselector(1, "c")}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7   root stylesheet
+
 <===>
 ================================================================================
 <===> sub/parent/input.scss
@@ -167,6 +181,20 @@ a list of strings, or a list of lists of strings.
   |       ^^^^^^^^^^^^^^^^^^^^^^^^
   '
   input.scss 1:7  root stylesheet
+
+<===> sub/type/error-libsass
+Error: $sub: 1 is not a valid selector: it must be a string,
+a list of strings, or a list of lists of strings.
+  ,
+1 | a {b: is-superselector("c", 1)}
+  |                             ^
+  '
+  input.scss 1:29  is-superselector()
+  ,
+1 | a {b: is-superselector("c", 1)}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7   root stylesheet
 
 <===>
 ================================================================================

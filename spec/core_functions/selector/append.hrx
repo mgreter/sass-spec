@@ -135,6 +135,19 @@ Error: Parent selectors aren't allowed here.
   '
   input.scss 1:7  root stylesheet
 
+<===> error/parent/error-libsass
+Error: Parent selectors aren't allowed here.
+  ,
+1 | &
+  | ^
+  '
+  input.scss 1:1  selector-append()
+  ,
+1 | a {b: selector-append(".c", "&")}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet
+
 <===>
 ================================================================================
 <===> error/invalid/input.scss

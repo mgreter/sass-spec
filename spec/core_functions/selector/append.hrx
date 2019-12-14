@@ -80,11 +80,6 @@ a {
 
 <===>
 ================================================================================
-<===> error/universal/options.yml
----
-:todo:
-- sass/libsass#2982
-
 <===> error/universal/input.scss
 a {b: selector-append(".c", "*")}
 
@@ -111,11 +106,6 @@ Error: Can't append > .d to .c.
 
 <===>
 ================================================================================
-<===> error/namespace/options.yml
----
-:todo:
-- sass/libsass#2976
-
 <===> error/namespace/input.scss
 a {b: selector-append("c", "|d")}
 
@@ -129,11 +119,6 @@ Error: Can't append |d to c.
 
 <===>
 ================================================================================
-<===> error/parent/options.yml
----
-:todo:
-- sass/libsass#2983
-
 <===> error/parent/input.scss
 a {b: selector-append(".c", "&")}
 

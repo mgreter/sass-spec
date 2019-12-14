@@ -28,11 +28,6 @@ a {
 <===> prefix/superset/input.scss
 a {b: is-superselector(":-pfx-any(c d, e f, g h)", "c d.i, e j f")}
 
-<===> prefix/superset/options.yml
----
-:todo:
-- libsass
-
 <===> prefix/superset/output.css
 a {
   b: true;

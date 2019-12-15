@@ -143,7 +143,7 @@ Error: expected "]".
 Error: expected "]".
   ,
 2 | [a=b _]{c: d}
-  |      ^
+  |     ^
   '
   input.scss 2:6  root stylesheet
 
@@ -151,9 +151,9 @@ Error: expected "]".
 Error: expected "]".
   ,
 2 | [a=b _] {c: d}
-  |      ^
+  |     ^
   '
-  input.scss 2:6  root stylesheet
+  input.scss 2:5  root stylesheet
 
 <===>
 ================================================================================
@@ -173,9 +173,9 @@ Error: expected "]".
 Error: expected "]".
   ,
 2 | [a=b 1] {c: d}
-  |      ^
+  |     ^
   '
-  input.scss 2:6  root stylesheet
+  input.scss 2:5  root stylesheet
 
 <===>
 ================================================================================
@@ -195,7 +195,7 @@ Error: expected "]".
 Error: expected "]".
   ,
 2 | [a=b ï] {c: d}
-  |      ^
+  |     ^
   '
-  input.scss 2:6  root stylesheet
+  input.scss 2:5  root stylesheet
 

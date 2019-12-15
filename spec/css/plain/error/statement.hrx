@@ -555,9 +555,9 @@ Error: expected ":".
 Error: expected ":".
   ,
 2 |   b {
-  |     ^
+  |    ^
   '
-  plain.css 2:5   @import
+  plain.css 2:4   @import
   ,
 1 | @import 'plain'
   |         ^^^^^^^

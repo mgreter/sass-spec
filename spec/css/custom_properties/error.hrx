@@ -71,6 +71,14 @@ Error: expected ";".
   '
   input.scss 2:11  root stylesheet
 
+<===> brackets/paren/error-libsass
+Error: expected ";".
+  ,
+2 |   --prop: );
+  |          ^
+  '
+  input.scss 2:10  root stylesheet
+
 <===>
 ================================================================================
 <===> brackets/square/input.scss
@@ -85,6 +93,14 @@ Error: expected ";".
   |           ^
   '
   input.scss 2:11  root stylesheet
+
+<===> brackets/square/error-libsass
+Error: expected ";".
+  ,
+2 |   --prop: ];
+  |          ^
+  '
+  input.scss 2:10  root stylesheet
 
 <===>
 ================================================================================

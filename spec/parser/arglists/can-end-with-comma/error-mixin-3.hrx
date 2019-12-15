@@ -11,3 +11,11 @@ Error: expected ")".
   '
   input.scss 2:35  root stylesheet
 
+<===> error-libsass
+Error: expected ")".
+  ,
+2 | @mixin missing-paren-error($a,$b, {
+  |                                  ^
+  '
+  input.scss 2:34  root stylesheet
+

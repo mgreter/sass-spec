@@ -194,7 +194,7 @@ Error: expected "]".
 <===> error/attribute/modifier/unicode/error-libsass
 Error: expected "]".
   ,
-2 | [a=b ï] {c: d}
+2 | [a=b ?] {c: d}
   |     ^
   '
   input.scss 2:5  root stylesheet

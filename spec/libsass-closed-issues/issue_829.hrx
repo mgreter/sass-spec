@@ -15,11 +15,6 @@
 
 
 <===> output.css
-@media (foo: bar), (bar: baz) {
-  .foo {
-    foo: bar;
-  }
-}
 @media (foo: bar) and (foo: bar), (bar: baz) and (foo: bar) {
   .foo {
     bar: baz;

@@ -28,9 +28,15 @@ in Dart Sass 2.0.0. Use call(get-function(bar)) instead.
     input.scss 10:9  root stylesheet
 
 <===> warning-libsass
-DEPRECATION WARNING: Passing a string to call() is deprecated and will be illegal
-in Dart Sass 2.0.0. Use call(get-function(bar)) instead.
+DEPRECATION WARNING on line 2, column 18 of input.scss:
+Passing a string to call() is deprecated and will be illegal in LibSass 4.1.0.
+Use call(get-function(bar)) instead.
 
+  ,
+2 |     @return call(bar, $list);
+  |                  ^^^
+  '
+    input.scss 2:18  call()
   ,
 2 |     @return call(bar, $list);
   |             ^^^^^^^^^^^^^^^^

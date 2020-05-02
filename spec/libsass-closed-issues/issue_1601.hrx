@@ -19,4 +19,9 @@ Error: Parent ".code.ruby >" is incompatible with this selector.
 2 |     &.ruby {
   |     ^^^^^^
   '
-  input.scss 2:5  root stylesheet
+  input.scss 2:5   root stylesheet
+  ,
+1 | .code.ruby > {
+  |            ^
+  '
+  input.scss 1:12  root stylesheet

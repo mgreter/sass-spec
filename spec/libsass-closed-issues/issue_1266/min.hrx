@@ -22,14 +22,20 @@ Error: blah is not a number.
   input.scss 3:8  root stylesheet
 
 <===> error-libsass
-DEPRECATION WARNING: Passing a string to call() is deprecated and will be illegal
-in Dart Sass 2.0.0. Use call(get-function(min)) instead.
+DEPRECATION WARNING on line 3, column 13 of input.scss:
+Passing a string to call() is deprecated and will be illegal in LibSass 4.1.0.
+Use call(get-function(min)) instead.
 
+  ,
+3 |   bar: call(min, $foo...);
+  |             ^^^
+  '
+    input.scss 3:13  call()
   ,
 3 |   bar: call(min, $foo...);
   |        ^^^^^^^^^^^^^^^^^^
   '
-    input.scss 3:8  root stylesheet
+    input.scss 3:8   root stylesheet
 
 Error: blah is not a number.
   ,

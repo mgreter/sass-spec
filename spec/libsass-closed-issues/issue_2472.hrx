@@ -61,18 +61,30 @@ in Dart Sass 2.0.0. Use call(get-function("darken")) instead.
     input.scss 21:14  root stylesheet
 
 <===> warning-libsass
-DEPRECATION WARNING: Passing a string to call() is deprecated and will be illegal
-in Dart Sass 2.0.0. Use call(get-function("darken")) instead.
+DEPRECATION WARNING on line 19, column 14 of input.scss:
+Passing a string to call() is deprecated and will be illegal in LibSass 4.1.0.
+Use call(get-function("darken")) instead.
 
+   ,
+19 |   call: call('darken', #102030, $arg...);
+   |              ^^^^^^^^
+   '
+    input.scss 19:14  call()
    ,
 19 |   call: call('darken', #102030, $arg...);
    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
    '
-    input.scss 19:9  root stylesheet
+    input.scss 19:9   root stylesheet
 
-DEPRECATION WARNING: Passing a string to call() is deprecated and will be illegal
-in Dart Sass 2.0.0. Use call(get-function("darken")) instead.
+DEPRECATION WARNING on line 5, column 16 of input.scss:
+Passing a string to call() is deprecated and will be illegal in LibSass 4.1.0.
+Use call(get-function("darken")) instead.
 
+  ,
+5 |   @return call('darken', $color, $args...);
+  |                ^^^^^^^^
+  '
+    input.scss 5:16   call()
   ,
 5 |   @return call('darken', $color, $args...);
   |           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -84,9 +96,15 @@ in Dart Sass 2.0.0. Use call(get-function("darken")) instead.
    '
     input.scss 20:13  root stylesheet
 
-DEPRECATION WARNING: Passing a string to call() is deprecated and will be illegal
-in Dart Sass 2.0.0. Use call(get-function("darken")) instead.
+DEPRECATION WARNING on line 11, column 16 of input.scss:
+Passing a string to call() is deprecated and will be illegal in LibSass 4.1.0.
+Use call(get-function("darken")) instead.
 
+   ,
+11 |   @return call('darken', $args...);
+   |                ^^^^^^^^
+   '
+    input.scss 11:16  call()
    ,
 11 |   @return call('darken', $args...);
    |           ^^^^^^^^^^^^^^^^^^^^^^^^

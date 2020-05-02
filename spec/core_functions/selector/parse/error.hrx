@@ -20,7 +20,7 @@ Error: Parent selectors aren't allowed here.
 1 | a {b: selector-parse(&)}
   |                      ^
   '
-  input.scss 1:22  #{}
+  input.scss 1:22  selector-parse()
   ,
 1 | a {b: selector-parse("&")}
   |                      ^^^
@@ -56,7 +56,7 @@ Error: expected more input.
 1 | a {b: selector-parse([c)}
   |                        ^
   '
-  input.scss 1:24  #{}
+  input.scss 1:24  selector-parse()
   ,
 1 | a {b: selector-parse("[c")}
   |                      ^^^^

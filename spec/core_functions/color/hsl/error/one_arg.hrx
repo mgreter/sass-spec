@@ -9,6 +9,11 @@ Error: Missing element $hue.
 2 |   x: hsl(());
   |      ^^^^^^^
   '
+  input.scss 2:6  hsl()
+  ,
+2 |   x: hsl(());
+  |      ^^^^^^^
+  '
   input.scss 2:6  root stylesheet
 
 <===>
@@ -20,6 +25,11 @@ comma-separated {
 
 <===> list/comma_separated/error
 Error: $channels must be a space-separated list.
+  ,
+2 |   x: hsl((0, 100%, 50%));
+  |      ^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6  hsl()
   ,
 2 |   x: hsl((0, 100%, 50%));
   |      ^^^^^^^^^^^^^^^^^^^
@@ -39,6 +49,11 @@ Error: $channels must be an unbracketed list.
 2 |   x: hsl([0 100% 50%]);
   |      ^^^^^^^^^^^^^^^^^
   '
+  input.scss 2:6  hsl()
+  ,
+2 |   x: hsl([0 100% 50%]);
+  |      ^^^^^^^^^^^^^^^^^
+  '
   input.scss 2:6  root stylesheet
 
 <===>
@@ -50,6 +65,11 @@ one-arg {
 
 <===> list/one_element/error
 Error: Missing element $saturation.
+  ,
+2 |   x: hsl(0);
+  |      ^^^^^^
+  '
+  input.scss 2:6  hsl()
   ,
 2 |   x: hsl(0);
   |      ^^^^^^
@@ -69,6 +89,11 @@ Error: Missing element $lightness.
 2 |   x: hsl(0 100%);
   |      ^^^^^^^^^^^
   '
+  input.scss 2:6  hsl()
+  ,
+2 |   x: hsl(0 100%);
+  |      ^^^^^^^^^^^
+  '
   input.scss 2:6  root stylesheet
 
 <===>
@@ -80,6 +105,11 @@ four-elements {
 
 <===> list/four_elements/error
 Error: Only 3 elements allowed, but 4 were passed.
+  ,
+2 |   x: hsl(0 100% 50% 0.4);
+  |      ^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6  hsl()
   ,
 2 |   x: hsl(0 100% 50% 0.4);
   |      ^^^^^^^^^^^^^^^^^^^

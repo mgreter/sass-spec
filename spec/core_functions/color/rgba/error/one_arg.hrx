@@ -9,6 +9,11 @@ Error: Missing element $red.
 2 |   x: rgba(());
   |      ^^^^^^^^
   '
+  input.scss 2:6  rgba()
+  ,
+2 |   x: rgba(());
+  |      ^^^^^^^^
+  '
   input.scss 2:6  root stylesheet
 
 <===>
@@ -20,6 +25,11 @@ one-element {
 
 <===> list/one_element/error
 Error: Missing element $green.
+  ,
+2 |   x: rgba(1);
+  |      ^^^^^^^
+  '
+  input.scss 2:6  rgba()
   ,
 2 |   x: rgba(1);
   |      ^^^^^^^
@@ -39,6 +49,11 @@ Error: Missing element $blue.
 2 |   x: rgba(1 2);
   |      ^^^^^^^^^
   '
+  input.scss 2:6  rgba()
+  ,
+2 |   x: rgba(1 2);
+  |      ^^^^^^^^^
+  '
   input.scss 2:6  root stylesheet
 
 <===>
@@ -50,6 +65,11 @@ four-elements {
 
 <===> list/four_elements/error
 Error: Only 3 elements allowed, but 4 were passed.
+  ,
+2 |   x: rgba(1 2 3 0.4);
+  |      ^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6  rgba()
   ,
 2 |   x: rgba(1 2 3 0.4);
   |      ^^^^^^^^^^^^^^^
@@ -69,6 +89,11 @@ Error: $channels must be a space-separated list.
 2 |   x: rgba((1, 2, 3));
   |      ^^^^^^^^^^^^^^^
   '
+  input.scss 2:6  rgba()
+  ,
+2 |   x: rgba((1, 2, 3));
+  |      ^^^^^^^^^^^^^^^
+  '
   input.scss 2:6  root stylesheet
 
 <===>
@@ -80,6 +105,11 @@ bracketed {
 
 <===> list/bracketed/error
 Error: $channels must be an unbracketed list.
+  ,
+2 |   x: rgba([1 2 3]);
+  |      ^^^^^^^^^^^^^
+  '
+  input.scss 2:6  rgba()
   ,
 2 |   x: rgba([1 2 3]);
   |      ^^^^^^^^^^^^^

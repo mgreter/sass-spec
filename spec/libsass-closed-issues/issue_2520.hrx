@@ -9,6 +9,9 @@
 // Compass (v1.0.3)
 // ----
 
+$config: null;
+$module: null;
+
 @function remove-modifiers($selector) {
     // convert selector to a string
     $selector: inspect(nth($selector, 1));
@@ -280,61 +283,3 @@
 [class*=modal--][class*="--animate"][class*="--zoom"] {
   content: "fizzbuzz";
 }
-
-<===> warning
-DEPRECATION WARNING: As of Dart Sass 2.0.0, !global assignments won't be able to
-declare new variables. Consider adding `$config: null` at the root of the
-stylesheet.
-
-DEPRECATION WARNING: As of Dart Sass 2.0.0, !global assignments won't be able to
-declare new variables. Consider adding `$module: null` at the root of the
-stylesheet.
-
-<===> warning-libsass
-DEPRECATION WARNING on line 120, column 7 of input.scss:
-As of LibSass 4.1, !global assignments won't be able to declare new variables.
-Consider adding `$config: null` at the root of the stylesheet.
-
-    ,
-120 |       $config: $map-merged !global;
-    |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-    '
-    input.scss 120:7   config()
-
-    ,
-235 |       $buttons: config((
-    | /---------------^
-236 | |       'group-spacing': 1em
-237 | |     ), $custom);
-    | \---------------^
-    '
-    input.scss 235:15  button()
-
-    ,
-252 |   @include button();
-    |   ^^^^^^^^^^^^^^^^^
-    '
-    input.scss 252:3   root stylesheet
-
-DEPRECATION WARNING on line 130, column 7 of input.scss:
-As of LibSass 4.1, !global assignments won't be able to declare new variables.
-Consider adding `$module: null` at the root of the stylesheet.
-
-    ,
-130 |       $module: $module !global;
-    |       ^^^^^^^^^^^^^^^^^^^^^^^^
-    '
-    input.scss 130:7  module()
-
-    ,
-239 |     @include module('button') {
-    |     ^^^^^^^^^^^^^^^^^^^^^^^^^
-    '
-    input.scss 239:5  button()
-
-    ,
-252 |   @include button();
-    |   ^^^^^^^^^^^^^^^^^
-    '
-    input.scss 252:3  root stylesheet
-

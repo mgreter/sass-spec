@@ -316,11 +316,6 @@ a {
 
 <===>
 ================================================================================
-<===> list/single/slash/options.yml
----
-:todo:
-- sass/libsass#2887
-
 <===> list/single/slash/input.scss
 $result: inspect(append((), 1, slash));
 a {
@@ -469,12 +464,6 @@ a {
 
 <===>
 ================================================================================
-<===> list/nested/empty/in_slash/options.yml
-:todo:
-- sass/libsass#2887
-
-<===>
-================================================================================
 <===> list/nested/empty/in_slash/bracketed/input.scss
 $result: inspect(join([(), ()], (), $separator: slash));
 a {
@@ -506,11 +495,6 @@ a {
 
 <===>
 ================================================================================
-<===> list/nested/space/in_space/bracketed/options.yml
----
-:todo:
-- sass/libsass#2654
-
 <===> list/nested/space/in_space/bracketed/input.scss
 $result: inspect([(1 2) (3 4)]);
 a {
@@ -571,12 +555,6 @@ a {
 
 <===>
 ================================================================================
-<===> list/nested/space/in_slash/options.yml
-:todo:
-- sass/libsass#2887
-
-<===>
-================================================================================
 <===> list/nested/space/in_slash/bracketed/input.scss
 $result: inspect(join([1 2, 3 4], (), $separator: slash));
 a {
@@ -608,11 +586,6 @@ a {
 
 <===>
 ================================================================================
-<===> list/nested/comma/in_space/bracketed/options.yml
----
-:todo:
-- sass/libsass#2931
-
 <===> list/nested/comma/in_space/bracketed/input.scss
 $result: inspect([(1, 2) (3, 4)]);
 a {
@@ -668,12 +641,6 @@ a {
   value: (1, 2), (3, 4);
   type: string;
 }
-
-<===>
-================================================================================
-<===> list/nested/comma/in_slash/options.yml
-:todo:
-- sass/libsass#2887
 
 <===>
 ================================================================================
@@ -765,12 +732,6 @@ a {
   value: (1, 2), (3, 4);
   type: string;
 }
-
-<===>
-================================================================================
-<===> list/nested/bracketed/in_slash/options.yml
-:todo:
-- sass/libsass#2887
 
 <===>
 ================================================================================

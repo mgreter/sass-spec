@@ -190,12 +190,6 @@ a list of strings, or a list of lists of strings.
 
 <===>
 ================================================================================
-<===> slash_list/options.yml
-:todo:
-- sass/libsass#2887
-
-<===>
-================================================================================
 <===> slash_list/top_level/input.scss
 @use "sass:list";
 a {b: selector-parse(list.slash(c d, e f))}
@@ -224,15 +218,33 @@ a list of strings, or a list of lists of strings.
   '
   input.scss 2:7  root stylesheet
 
+<===> slash_list/in_comma_list/error-libsass
+Error: $selector: c / d, e / f is not a valid selector: it must be a string,
+a list of strings, or a list of lists of strings.
+  ,
+2 | a {b: selector-parse((list.slash(c, d), list.slash(e, f)))}
+  |                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:22  selector-parse()
+  ,
+2 | a {b: selector-parse((list.slash(c, d), list.slash(e, f)))}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:7   root stylesheet
+
 <===>
 ================================================================================
-<===> type/options.yml
----
-:todo:
-- sass/libsass#2964
-
 <===> type/input.scss
 a {b: selector-parse(1)}
+
+<===> type/error
+Error: $selector: 1 is not a valid selector: it must be a string,
+a list of strings, or a list of lists of strings.
+  ,
+1 | a {b: selector-parse(1)}
+  |       ^^^^^^^^^^^^^^^^^
+  '
+  input.scss 1:7  root stylesheet
 
 <===> type/error-libsass
 Error: $selector: 1 is not a valid selector: it must be a string,
@@ -247,15 +259,6 @@ a list of strings, or a list of lists of strings.
   |       ^^^^^^^^^^^^^^^^^
   '
   input.scss 1:7   root stylesheet
-
-<===> type/error
-Error: $selector: 1 is not a valid selector: it must be a string,
-a list of strings, or a list of lists of strings.
-  ,
-1 | a {b: selector-parse(1)}
-  |       ^^^^^^^^^^^^^^^^^
-  '
-  input.scss 1:7  root stylesheet
 
 <===>
 ================================================================================

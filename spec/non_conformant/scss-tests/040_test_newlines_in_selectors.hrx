@@ -8,7 +8,6 @@ foo
 bar {a: b}
 
 <===> output.css
-foo
-bar {
+foo bar {
   a: b;
 }

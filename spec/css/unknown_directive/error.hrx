@@ -61,11 +61,6 @@ Error: Expected identifier.
 
 <===>
 ================================================================================
-<===> interpolation/in_declaration/options.yml
----
-:todo:
-- libsass
-
 <===> interpolation/in_declaration/input.scss
 // Unknown at-rules aren't allowed in property declarations.
 .x {
@@ -81,13 +76,6 @@ Error: Expected identifier.
   |      ^
   '
   input.scss 4:6  root stylesheet
-
-<===>
-================================================================================
-<===> interpolation/in_function/options.yml
----
-:todo:
-- libsass
 
 <===> interpolation/in_function/input.scss
 // Unknown at-rules aren't allowed in functions.

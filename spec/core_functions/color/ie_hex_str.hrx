@@ -118,9 +118,14 @@ Error: $color: c is not a color.
   input.scss 1:7  root stylesheet
 
 <===> error/type/error-libsass
-Error: argument `$color` of `ie-hex-str($color)` must be a color
-        on line 1:7 of input.scss, in function `ie-hex-str`
-        from line 1:7 of input.scss
->> a {b: ie-hex-str(c)}
-
-   ------^
+Error: $color: c is not a color.
+  ,
+1 | a {b: ie-hex-str(c)}
+  |                  ^
+  '
+  input.scss 1:18  ie-hex-str()
+  ,
+1 | a {b: ie-hex-str(c)}
+  |       ^^^^^^^^^^^^^
+  '
+  input.scss 1:7   root stylesheet

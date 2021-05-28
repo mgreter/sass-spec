@@ -27,3 +27,11 @@ Error: Expected "]".
   |          ^
   '
   input.scss 1:10  root stylesheet
+
+<===> error-libsass
+Error: Expected "]".
+  ,
+1 | [charset i] {
+  |          ^
+  '
+  input.scss 1:10  root stylesheet

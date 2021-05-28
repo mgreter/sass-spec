@@ -190,12 +190,6 @@ a list of strings, or a list of lists of strings.
 
 <===>
 ================================================================================
-<===> slash_list/options.yml
-:todo:
-- sass/libsass#2887
-
-<===>
-================================================================================
 <===> slash_list/top_level/input.scss
 @use "sass:list";
 a {b: selector-parse(list.slash(c d, e f))}

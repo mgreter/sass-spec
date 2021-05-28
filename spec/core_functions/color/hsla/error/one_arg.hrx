@@ -18,6 +18,14 @@ Error: Missing element $hue.
   '
   input.scss 2:6  root stylesheet
 
+<===> list/empty/error-libsass
+Error: Missing argument $hue.
+  ,
+2 |   b: hsla(());
+  |      ^^^^^^^^
+  '
+  input.scss 2:6  root stylesheet
+
 <===>
 ================================================================================
 <===> list/comma_separated/input.scss
@@ -89,6 +97,14 @@ Error: Missing element $saturation.
   '
   input.scss 2:6  root stylesheet
 
+<===> list/one_element/error-libsass
+Error: Missing argument $saturation.
+  ,
+2 |   b: hsla(0);
+  |      ^^^^^^^
+  '
+  input.scss 2:6  root stylesheet
+
 <===>
 ================================================================================
 <===> list/two_elements/input.scss
@@ -98,6 +114,14 @@ a {
 
 <===> list/two_elements/error
 Error: Missing element $lightness.
+  ,
+2 |   b: hsla(0 100%);
+  |      ^^^^^^^^^^^^
+  '
+  input.scss 2:6  root stylesheet
+
+<===> list/two_elements/error-libsass
+Error: Missing argument $lightness.
   ,
 2 |   b: hsla(0 100%);
   |      ^^^^^^^^^^^^
@@ -118,6 +142,19 @@ Error: Only 3 elements allowed, but 4 were passed.
   |      ^^^^^^^^^^^^^^^^^^^^
   '
   input.scss 2:6  root stylesheet
+
+<===> list/four_elements/error-libsass
+Error: Only 3 arguments allowed, but 4 were passed.
+  ,
+2 |   b: hsla(0 100% 50% 0.4);
+  |           ^^^^^^^^^^^^^^
+  '
+  input.scss 2:11  hsla()
+  ,
+2 |   b: hsla(0 100% 50% 0.4);
+  |      ^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:6   root stylesheet
 
 <===>
 ================================================================================
@@ -272,6 +309,14 @@ Error: Missing element $hue.
   '
   input.scss 2:7  root stylesheet
 
+<===> slash_list/channels/empty/error-libsass
+Error: Missing argument $hue.
+  ,
+2 | a {b: hsla(list.slash((), 1))}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:7  root stylesheet
+
 <===>
 ================================================================================
 <===> slash_list/channels/comma_separated/input.scss
@@ -340,6 +385,14 @@ Error: Missing element $saturation.
   '
   input.scss 2:7  root stylesheet
 
+<===> slash_list/channels/one_element/error-libsass
+Error: Missing argument $saturation.
+  ,
+2 | a {b: hsla(list.slash(0, 1))}
+  |       ^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:7  root stylesheet
+
 <===>
 ================================================================================
 <===> slash_list/channels/two_elements/input.scss
@@ -348,6 +401,14 @@ a {b: hsla(list.slash(0 100%, 1))}
 
 <===> slash_list/channels/two_elements/error
 Error: Missing element $lightness.
+  ,
+2 | a {b: hsla(list.slash(0 100%, 1))}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:7  root stylesheet
+
+<===> slash_list/channels/two_elements/error-libsass
+Error: Missing argument $lightness.
   ,
 2 | a {b: hsla(list.slash(0 100%, 1))}
   |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -367,3 +428,16 @@ Error: Only 3 elements allowed, but 4 were passed.
   |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
   '
   input.scss 2:7  root stylesheet
+
+<===> slash_list/channels/four_elements/error-libsass
+Error: Only 3 arguments allowed, but 4 were passed.
+  ,
+2 | a {b: hsla(list.slash(0 100% 50% 0.4, 1))}
+  |                       ^^^^^^^^^^^^^^
+  '
+  input.scss 2:23  hsla()
+  ,
+2 | a {b: hsla(list.slash(0 100% 50% 0.4, 1))}
+  |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  '
+  input.scss 2:7   root stylesheet

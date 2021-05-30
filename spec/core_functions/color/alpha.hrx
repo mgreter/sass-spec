@@ -137,11 +137,6 @@ Error: Only 1 argument allowed, but 2 were passed.
 
 <===>
 ================================================================================
-<===> error/type/options.yml
----
-:todo:
-- sass/libsass#2898
-
 <===> error/type/input.scss
 a {b: alpha(1)}
 
@@ -199,11 +194,6 @@ Error: $color: "c=d" is not a color.
 
 <===>
 ================================================================================
-<===> error/unquoted_string/no_equals/options.yml
----
-:todo:
-- sass/libsass#2898
-
 <===> error/unquoted_string/no_equals/input.scss
 a {b: alpha(cd)}
 
@@ -230,11 +220,6 @@ Error: $color: cd is not a color.
 
 <===>
 ================================================================================
-<===> error/unquoted_string/non_identifier_before_equals/options.yml
----
-:todo:
-- sass/libsass#2898
-
 <===> error/unquoted_string/non_identifier_before_equals/input.scss
 a {b: alpha(unquote("1=c"))}
 

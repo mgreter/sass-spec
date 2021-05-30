@@ -156,11 +156,6 @@ Error: $amount: red is not a number.
   '
   input.scss 1:7  root stylesheet
 
-<===> error/one_arg/type/options.yml
----
-:todo:
-- sass/libsass#2895
-
 <===> error/one_arg/type/error-libsass
 Error: $amount: red is not a number.
   ,

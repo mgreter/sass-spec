@@ -212,23 +212,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:7   root stylesheet
 
-DEPRECATION WARNING on line 1, column 12 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1em, 1rad), 1s)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | a {b: unit(1px * 1em / 1rad / 1s)}
-  |            ^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:12  unit()
-  ,
-1 | a {b: unit(1px * 1em / 1rad / 1s)}
-  |       ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:7   root stylesheet
+Additionally, one similar warning was suppressed!
 
 <===>
 ================================================================================

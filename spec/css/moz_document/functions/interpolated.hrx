@@ -190,3 +190,15 @@ For details, see http://bit.ly/moz-document.
 32 | |   a {type: regexp}
 33 | \ }
    '
+
+<===> warning-libsass
+DEPRECATION WARNING on line 1, column 1 of input.scss: 
+@-moz-document is deprecated and support will be removed in Dart Sass 2.0.0.
+
+For details, see http://bit.ly/moz-document.
+  ,
+1 | / @-moz-document url(#{"sass-lang.com"}) {
+2 | |   a {type: unquoted full url}
+3 | \ }
+  '
+Additionally, 6 similar warnings were suppressed!

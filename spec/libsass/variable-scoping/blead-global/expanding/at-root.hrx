@@ -77,12 +77,4 @@ unnecessary and can safely be removed.
   '
     input.scss 3:1  root stylesheet
 
-DEPRECATION WARNING on line 10, column 3 of input.scss:
-As of LibSass 4.1, !global assignments won't be able to declare new variables. 
-Consider adding `$local_explicit: null` at the root of the stylesheet. 
-
-   ,
-10 |   $local_explicit: outer !global;
-   |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-   '
-    input.scss 10:3  root stylesheet
+Additionally, one similar warning was suppressed!

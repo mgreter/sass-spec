@@ -64,23 +64,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 2:6   root stylesheet
 
-DEPRECATION WARNING on line 2, column 15 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1, 1px), 1rad)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-2 |   b: inspect((1 / 1px / 1rad));
-  |               ^^^^^^^^^^^^^^
-  '
-    input.scss 2:15  inspect()
-  ,
-2 |   b: inspect((1 / 1px / 1rad));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 2:6   root stylesheet
+Additionally, one similar warning was suppressed!
 
 <===>
 ================================================================================
@@ -194,41 +178,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 2:6   root stylesheet
 
-DEPRECATION WARNING on line 2, column 19 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1, 1px), 1rad)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-2 |   b: inspect(1 / (1 / 1px / 1rad));
-  |                   ^^^^^^^^^^^^^^
-  '
-    input.scss 2:19  inspect()
-  ,
-2 |   b: inspect(1 / (1 / 1px / 1rad));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 2:6   root stylesheet
-
-DEPRECATION WARNING on line 2, column 14 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(1, (math.div(math.div(1, 1px), 1rad)))
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-2 |   b: inspect(1 / (1 / 1px / 1rad));
-  |              ^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 2:14  inspect()
-  ,
-2 |   b: inspect(1 / (1 / 1px / 1rad));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 2:6   root stylesheet
+Additionally, 2 similar warnings were suppressed!
 
 <===>
 ================================================================================
@@ -282,18 +232,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:10  root stylesheet
 
-DEPRECATION WARNING on line 1, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1rad, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | $number: 1px * 1rad / 1ms / 1Hz;
-  |          ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:10  root stylesheet
+Additionally, one similar warning was suppressed!
 
 <===>
 ================================================================================
@@ -347,18 +286,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:10  root stylesheet
 
-DEPRECATION WARNING on line 1, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1rad, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | $number: 1px * 1rad / 1ms / 1Hz;
-  |          ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:10  root stylesheet
+Additionally, one similar warning was suppressed!
 
 <===>
 ================================================================================
@@ -424,36 +352,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:10  root stylesheet
 
-DEPRECATION WARNING on line 1, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1rad, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | $number: 1px * 1rad / 1ms / 1Hz;
-  |          ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:10  root stylesheet
-
-DEPRECATION WARNING on line 3, column 25 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(1, 1px)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number * (1 / 1px));
-  |                         ^^^^^^^
-  '
-    input.scss 3:25  inspect()
-  ,
-3 |   b: inspect($number * (1 / 1px));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
+Additionally, 2 similar warnings were suppressed!
 
 <===>
 ================================================================================
@@ -531,54 +430,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:10  root stylesheet
 
-DEPRECATION WARNING on line 1, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1rad, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | $number: 1px * 1rad / 1ms / 1Hz;
-  |          ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:10  root stylesheet
-
-DEPRECATION WARNING on line 3, column 25 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(1, 1px)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number * (1 / 1px / 1rad));
-  |                         ^^^^^^^
-  '
-    input.scss 3:25  inspect()
-  ,
-3 |   b: inspect($number * (1 / 1px / 1rad));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
-
-DEPRECATION WARNING on line 3, column 25 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1, 1px), 1rad)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number * (1 / 1px / 1rad));
-  |                         ^^^^^^^^^^^^^^
-  '
-    input.scss 3:25  inspect()
-  ,
-3 |   b: inspect($number * (1 / 1px / 1rad));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
+Additionally, 3 similar warnings were suppressed!
 
 <===>
 ================================================================================
@@ -644,36 +496,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:10  root stylesheet
 
-DEPRECATION WARNING on line 1, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1rad, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | $number: 1px * 1rad / 1ms / 1Hz;
-  |          ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:10  root stylesheet
-
-DEPRECATION WARNING on line 3, column 25 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(1ms, 1px)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number * (1ms / 1px));
-  |                         ^^^^^^^^^
-  '
-    input.scss 3:25  inspect()
-  ,
-3 |   b: inspect($number * (1ms / 1px));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
+Additionally, 2 similar warnings were suppressed!
 
 <===>
 ================================================================================
@@ -751,54 +574,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:10  root stylesheet
 
-DEPRECATION WARNING on line 1, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1rad, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | $number: 1px * 1rad / 1ms / 1Hz;
-  |          ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:10  root stylesheet
-
-DEPRECATION WARNING on line 3, column 25 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(1, 1ms)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number / (1 / 1ms));
-  |                         ^^^^^^^
-  '
-    input.scss 3:25  inspect()
-  ,
-3 |   b: inspect($number / (1 / 1ms));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
-
-DEPRECATION WARNING on line 3, column 14 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div($number, (math.div(1, 1ms)))
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number / (1 / 1ms));
-  |              ^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:14  inspect()
-  ,
-3 |   b: inspect($number / (1 / 1ms));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
+Additionally, 3 similar warnings were suppressed!
 
 <===>
 ================================================================================
@@ -888,72 +664,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:10  root stylesheet
 
-DEPRECATION WARNING on line 1, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1rad, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | $number: 1px * 1rad / 1ms / 1Hz;
-  |          ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:10  root stylesheet
-
-DEPRECATION WARNING on line 3, column 25 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(1, 1ms)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number / (1 / 1ms / 1Hz));
-  |                         ^^^^^^^
-  '
-    input.scss 3:25  inspect()
-  ,
-3 |   b: inspect($number / (1 / 1ms / 1Hz));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
-
-DEPRECATION WARNING on line 3, column 25 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number / (1 / 1ms / 1Hz));
-  |                         ^^^^^^^^^^^^^
-  '
-    input.scss 3:25  inspect()
-  ,
-3 |   b: inspect($number / (1 / 1ms / 1Hz));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
-
-DEPRECATION WARNING on line 3, column 14 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div($number, (math.div(math.div(1, 1ms), 1Hz)))
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number / (1 / 1ms / 1Hz));
-  |              ^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:14  inspect()
-  ,
-3 |   b: inspect($number / (1 / 1ms / 1Hz));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
+Additionally, 4 similar warnings were suppressed!
 
 <===>
 ================================================================================
@@ -1019,36 +730,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:10  root stylesheet
 
-DEPRECATION WARNING on line 1, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1rad, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | $number: 1px * 1rad / 1ms / 1Hz;
-  |          ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:10  root stylesheet
-
-DEPRECATION WARNING on line 3, column 14 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div($number, 1px)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number / 1px);
-  |              ^^^^^^^^^^^^^
-  '
-    input.scss 3:14  inspect()
-  ,
-3 |   b: inspect($number / 1px);
-  |      ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
+Additionally, 2 similar warnings were suppressed!
 
 <===>
 ================================================================================
@@ -1114,36 +796,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:10  root stylesheet
 
-DEPRECATION WARNING on line 1, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1rad, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | $number: 1px * 1rad / 1ms / 1Hz;
-  |          ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:10  root stylesheet
-
-DEPRECATION WARNING on line 3, column 14 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div($number, (1px * 1rad))
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number / (1px * 1rad));
-  |              ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:14  inspect()
-  ,
-3 |   b: inspect($number / (1px * 1rad));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
+Additionally, 2 similar warnings were suppressed!
 
 <===>
 ================================================================================
@@ -1221,54 +874,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:10  root stylesheet
 
-DEPRECATION WARNING on line 1, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1rad, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | $number: 1px * 1rad / 1ms / 1Hz;
-  |          ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:10  root stylesheet
-
-DEPRECATION WARNING on line 3, column 25 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(1px, 1ms)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number / (1px / 1ms));
-  |                         ^^^^^^^^^
-  '
-    input.scss 3:25  inspect()
-  ,
-3 |   b: inspect($number / (1px / 1ms));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
-
-DEPRECATION WARNING on line 3, column 14 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div($number, (math.div(1px, 1ms)))
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number / (1px / 1ms));
-  |              ^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:14  inspect()
-  ,
-3 |   b: inspect($number / (1px / 1ms));
-  |      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
+Additionally, 3 similar warnings were suppressed!
 
 <===>
 ================================================================================
@@ -1322,18 +928,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:10  root stylesheet
 
-DEPRECATION WARNING on line 1, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1rad, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | $number: 1px * 1rad / 1ms / 1Hz;
-  |          ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:10  root stylesheet
+Additionally, one similar warning was suppressed!
 
 <===>
 ================================================================================
@@ -1399,36 +994,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 1:10  root stylesheet
 
-DEPRECATION WARNING on line 1, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1px * 1rad, 1ms), 1Hz)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-1 | $number: 1px * 1rad / 1ms / 1Hz;
-  |          ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 1:10  root stylesheet
-
-DEPRECATION WARNING on line 3, column 14 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div($number, 1in)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-3 |   b: inspect($number / 1in);
-  |              ^^^^^^^^^^^^^
-  '
-    input.scss 3:14  inspect()
-  ,
-3 |   b: inspect($number / 1in);
-  |      ^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 3:6   root stylesheet
+Additionally, 2 similar warnings were suppressed!
 
 <===>
 ================================================================================
@@ -1483,18 +1049,7 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 2:10  root stylesheet
 
-DEPRECATION WARNING on line 2, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1foo * 1bar, 1baz), 1qux)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-2 | $number: 1foo * 1bar / 1baz / 1qux;
-  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 2:10  root stylesheet
+Additionally, one similar warning was suppressed!
 
 <===>
 ================================================================================
@@ -1561,33 +1116,4 @@ More info and automated migrator: https://sass-lang.com/d/slash-div
   '
     input.scss 2:10  root stylesheet
 
-DEPRECATION WARNING on line 2, column 10 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div(math.div(1foo * 1bar, 1baz), 1qux)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-2 | $number: 1foo * 1bar / 1baz / 1qux;
-  |          ^^^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 2:10  root stylesheet
-
-DEPRECATION WARNING on line 4, column 14 of input.scss:
-Using / for division is deprecated and will be removed in LibSass 4.1.0.
-
-Recommendation: math.div($number, 1foo)
-
-More info and automated migrator: https://sass-lang.com/d/slash-div
-
-  ,
-4 |   b: inspect($number / 1foo);
-  |              ^^^^^^^^^^^^^^
-  '
-    input.scss 4:14  inspect()
-  ,
-4 |   b: inspect($number / 1foo);
-  |      ^^^^^^^^^^^^^^^^^^^^^^^
-  '
-    input.scss 4:6   root stylesheet
+Additionally, 2 similar warnings were suppressed!
